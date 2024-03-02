@@ -14,6 +14,7 @@ export default function Home() {
     return (
     <main className={styles.main}>
        <h1>4School</h1>
+        <h6>Choose the Server you want to enter</h6>
             {/* {{classServers}} */}
         {serverList.map((serv,index) =>(
             <ClassServer serverInfo={serv}/>

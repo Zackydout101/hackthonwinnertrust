@@ -14,7 +14,7 @@ export default function ClassServer({serverInfo}) {
     // let server = serverList[index]
     return (
     <>
-        <Link href={serverInfo.route}><h4>{serverInfo.name}</h4></Link>
+        <Link href={serverInfo.route}><h4 class="layer1">{serverInfo.name}</h4></Link>
     </>
     )
 }
