@@ -5,11 +5,20 @@ import ClassServer from "./components/server.js";
 import {serverList} from './data.js'
 
 export default function Home() {
-  return (
+    const classServers = []
+
+    for(let i =0;i<3;i++){
+        classServers.push(<classServer serverInfo={serverList[i]}/>)
+    }
+
+    return (
     <main className={styles.main}>
        <h1>4School</h1>
-        
-        <ClassServer serverInfo={serverList[0]}/>
+            {/* {{classServers}} */}
+        {serverList.map((serv,index) =>(
+            <ClassServer serverInfo={serv}/>
+        ))}
+
     </main>
   );
 }
