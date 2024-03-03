@@ -5,28 +5,6 @@ import React, { useEffect, useState } from 'react';
  
 export default function ClassServer({serverInfo}) {
     let index =0;
-    const [messages, setMessages] = useState([]);
-
-  useEffect(() => {
-    const socket = new WebSocket('ws:'.concat(serverInfo.address)); // Replace with your WebSocket server URL
-
-    socket.onopen = () => {
-      console.log('WebSocket connection established');
-    };
-
-    socket.onmessage = (event) => {
-      const newMessage = event.data;
-      setMessages((prevMessages) => [...prevMessages, newMessage]);
-    };
-
-    socket.onclose = () => {
-      console.log('WebSocket connection closed');
-    };
-
-    return () => {
-      socket.close();
-    };
-      }, []);    
 
     return (
     <>
