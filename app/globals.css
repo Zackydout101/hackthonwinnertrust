@@ -178,6 +178,7 @@ li {
 }
 .received{
   /* background: gray; */
+  width:100%;
   margin-bottom: 1px;
   border-bottom:10px;
   border-color:gray;
