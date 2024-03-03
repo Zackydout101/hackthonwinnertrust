@@ -14,9 +14,13 @@ export default function Home() {
 
     return (
     <main className={styles.main}>
+        
         <Navbar />
-        <Sidebar />
-        <Test />
+        <div className="mainContainer">
+            <Sidebar />
+            <Test />
+        </div>
+        
    </main>
   );
 }

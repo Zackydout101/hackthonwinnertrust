@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1100px;
+  
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -134,7 +134,6 @@ nav {
 }
 
 .sidebar {
-    position: absolute;
     left: 0;
     top: 45px;
     bottom: 0;
@@ -147,4 +146,10 @@ nav {
     right:0;
     left:0;
 
+}
+
+.mainContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
 }

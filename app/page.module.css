@@ -228,3 +228,7 @@
     transform: rotate(0deg);
   }
 }
+.mainContainer {
+  display: flex;
+
+}
