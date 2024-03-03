@@ -164,21 +164,28 @@ nav {
   margin:1em;
   overflow-y: auto;
 }
-.received .mesBody{
-  background: gray;
+.received{
+  /* background: gray; */
+  margin-bottom: 1px;
+  border-bottom:10px;
+  border-color:gray;
 
 }
 .sent{
   background:rgb(0,120,254);
 }
 .mesBody{
-  width:max-content;
-  max-width: 250px;
+  /* width:max-content; */
+  /* max-width: 250px; */
+  width:100%;
+  border-bottom: solid 1px;
+  border-bottom-color: gray;
   margin:1em;
   margin-top:0;
 }
 .metadeta{
   display:flex;
+  margin:1em;
   font:.1em;
 }
 .mesTime{
