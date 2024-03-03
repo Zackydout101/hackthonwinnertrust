@@ -177,7 +177,7 @@ nav {
 .mesBody{
   /* width:max-content; */
   /* max-width: 250px; */
-  width:100%;
+  width:100vw;
   border-bottom: solid 1px;
   border-bottom-color: gray;
   margin:1em;
