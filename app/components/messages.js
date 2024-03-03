@@ -1,14 +1,16 @@
-"use client"
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useEffect, useState, useRef } from "react";
 import { db } from './firebaseConfig';
 import { collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import { formatRelative } from "date-fns";
 
-export default function Messages({mes}) {
-    const [uid, setUid] = useState("");
-    const [messages, setMessages] = useState([]);
-    const [newMessage, setNewMessage] = useState("");
-   // Fetching messages from Firestore
+export default function Messages({ mes }) {
+  const [uid, setUid] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState("");
+  const messageContainerRef = useRef(null);
+
+  // Fetching messages from Firestore
   useEffect(() => {
     const messagesRef = collection(db, "messages");
     const q = query(messagesRef, orderBy("createdAt"), limit(100));
