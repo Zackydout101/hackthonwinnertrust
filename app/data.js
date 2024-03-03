@@ -1,4 +1,9 @@
 export const serverList = [{
+
+    name: 'General',
+    route: "/"
+
+},{
     name: 'Math',
     address: '18.223.252.46:3000',
     route: "/math"

@@ -160,6 +160,7 @@ nav {
 }
 .messageContainer{
   display:inline-block;
+<<<<<<< HEAD
   max-width: 30em;
   margin:1em;
   overflow-y: auto;
@@ -187,3 +188,7 @@ nav {
   display:inline;
   margin-right: 1em; 
 }
+=======
+  overflow-y: auto;
+}
+>>>>>>> c3a89b36955211e650a568712b7e75701d20365e

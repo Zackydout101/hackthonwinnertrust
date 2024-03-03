@@ -33,7 +33,7 @@ const Test = () => {
       });
 
       setNewMessage("");
-      alert("Data added to firestore DB!!");
+      //alert("Data added to firestore DB!!");
     } catch (error) {
       console.error("Error adding message: ", error);
     }
