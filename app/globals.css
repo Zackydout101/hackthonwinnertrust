@@ -171,7 +171,6 @@ li {
 }
 .messageContainer{
   display:inline-block;
-  max-width: 30em;
   margin:1em;
   overflow-y: auto;
 }
@@ -211,5 +210,8 @@ li {
   font:.1em;
 }
 
+.ulList{
+  width:100%;
+}
 
 

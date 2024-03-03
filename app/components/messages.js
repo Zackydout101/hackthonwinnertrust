@@ -36,7 +36,7 @@ export default function Messages({ dbCollection }) {
 
   return (
     <div className="messageContainer" ref={messageContainerRef}>
-      <ul>
+      <ul class = "ulList">
         {messages.map((message) => (
           <li key={message.id} className={message.uid === uid ? "sent" : "received"}>
             <span className="metadata">
