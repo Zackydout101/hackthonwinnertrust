@@ -160,4 +160,5 @@ nav {
 }
 .messageContainer{
   display:inline-block;
+  overflow-y: auto;
 }
