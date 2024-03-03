@@ -3,6 +3,7 @@ import ClassServer from "./components/server.js";
 import Navbar from "./components/navbar.js";
 import Sidebar from "./components/sidebar.js";
 import Test from "./components/P2.js";
+import Messages from "./components/messages.js";
 import {serverList} from './data.js'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Navbar />
         <div className="mainContainer">
             <Sidebar />
+            <Messages />
             <Test />
         </div>
         

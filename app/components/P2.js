@@ -57,46 +57,20 @@ const Test = () => {
   }, []);
 
   return (
-    <div className="text">
-      <footer className={styles.footer}>
-        <p>4School</p>
-      </footer>
-      <div className={styles.chatBox}>
-        <div className={styles.chatIcon} onClick={() => alert("Open chat")}>
-        </div>
-        <div className={styles.textBox}>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={newMessage}
-              onChange={(e) => setNewMessage(e.target.value)}
-              placeholder="Type your message here..."
-            />
-            <button type="submit" disabled={!newMessage}>
-              Send
-            </button>
-          </form>
-          <ul>
-            {messages.map((message) => (
-              <li key={message.id} className={message.uid === uid ? "sent" : "received"}>
-                <section>
-                  {/* Display the UID with the message */}
-                  <p>{message.uid}</p>
-                  <p>{message.text}</p>
-                  {/* Message date and time */}
-                  {message.createdAt?.seconds && (
-                    <span>
-                      {formatRelative(new Date(message.createdAt.seconds * 1000), new Date())}
-                    </span>
-                  )}
-                </section>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="textBox">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={newMessage}
+            onChange={(e) => setNewMessage(e.target.value)}
+            placeholder="Type your message here..."
+          />
+          <button type="submit" disabled={!newMessage}>
+            Send
+          </button>
+        </form>
       </div>
-    </div>
-  );
+  )
 };
 
 export default Test;
