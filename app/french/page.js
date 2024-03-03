@@ -1,3 +1,4 @@
+
 import styles from "../page.module.css";
 import ClassServer from "../components/server.js";
 import Navbar from "../components/navbar.js";
@@ -5,7 +6,7 @@ import Sidebar from "../components/sidebar.js";
 import Test from "../components/P2.js";
 import {serverList} from '../data.js'
 
-export default function French() {
+export default function Home() {
     const classServers = []
 
     for(let i =0;i<3;i++){
@@ -14,9 +15,15 @@ export default function French() {
 
     return (
     <main className={styles.main}>
+        
         <Navbar />
-        <Sidebar />
-        <Test />
+        <div className="mainContainer">
+            <Sidebar />
+            <Test />
+        </div>
+        
    </main>
   );
 }
+
+

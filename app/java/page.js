@@ -5,8 +5,7 @@ import Sidebar from "../components/sidebar.js";
 import Test from "../components/P2.js";
 import {serverList} from '../data.js'
 
-
-export default function Java() {
+export default function Home() {
     const classServers = []
 
     for(let i =0;i<3;i++){
@@ -15,9 +14,14 @@ export default function Java() {
 
     return (
     <main className={styles.main}>
+        
         <Navbar />
-        <Sidebar />
-        <Test />
+        <div className="mainContainer">
+            <Sidebar />
+            <Test />
+        </div>
+        
    </main>
   );
 }
+

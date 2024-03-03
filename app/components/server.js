@@ -31,15 +31,15 @@ export default function ClassServer({serverInfo}) {
     return (
     <>
         <Link href={serverInfo.route}><h4 class="layer1">{serverInfo.name}</h4></Link>
-    <div>
+    {/* <div>
       <h2>WebSocket Messages:</h2>
       <ul>
         {messages.map((message, index) => (
           <li key={index}>{message}</li>
         ))}
       </ul>
-    </div>
-  );
+    </div> */}
+  {/* ); */}
     </>
     )
 }
