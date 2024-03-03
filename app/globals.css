@@ -178,13 +178,14 @@ nav {
 }
 .metadeta{
   display:flex;
-  font:5px;
+  font:.1em;
 }
 .mesTime{
   display:inline;
-
+  font:.1em;
 }
 .mesName{
   display:inline;
   margin-right: 1em; 
+  font:.1em;
 }

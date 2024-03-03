@@ -4,7 +4,7 @@ import { db } from './firebaseConfig';
 import { collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import { formatRelative } from "date-fns";
 
-export default function Messages({ mes }) {
+export default function Messages({dbCollection}) {
   const [uid, setUid] = useState("");
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
@@ -12,7 +12,7 @@ export default function Messages({ mes }) {
 
   // Fetching messages from Firestore
   useEffect(() => {
-    const messagesRef = collection(db, "messages");
+    const messagesRef = collection(db, dbCollection);
     const q = query(messagesRef, orderBy("createdAt"), limit(100));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -34,7 +34,7 @@ export default function Messages({ mes }) {
                 
                     <span class="metadata">
                         {/* Display the UID with the message */}
-                        <p class="mesName">{message.uid}</p>
+                        <h6 class="mesName">{message.uid}</h6>
                         {/* Message date and time */}
                         {message.createdAt?.seconds && (
                         <span class="mesTime">

@@ -20,7 +20,7 @@ export default function Home() {
         <div className="mainContainer">
             <Sidebar />
             <div class="messagesContainer">
-                <Messages />
+                <Messages dbCollection = "GeneralChatRoom" />
                 <Test />
             </div>
         </div>
