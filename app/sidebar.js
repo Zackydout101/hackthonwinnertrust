@@ -1,10 +1,8 @@
-import styles from "./page.module.css";
-import ClassServer from "./components/server.js";
-import Navbar from "./components/navbar.js";
-import Sidebar from "./components/sidebar.js";
-import {serverList} from './data.js'
+import ClassServer from "./server.js";
+import Navbar from "./navbar.js";
+import {serverList} from '../data.js'
 
-export default function Home() {
+export default function Sidebar() {
     const classServers = []
 
     for(let i =0;i<3;i++){
@@ -12,9 +10,8 @@ export default function Home() {
     }
 
     return (
-    <main className={styles.main}>
+    <div class="sidebar">
         <Navbar />
-        <Sidebar />
        <h1>4School</h1>
         <h6>Choose the Server you want to enter</h6>
             {/* {{classServers}} */}
@@ -22,6 +19,6 @@ export default function Home() {
             <ClassServer serverInfo={serv}/>
         ))}
 
-    </main>
+    </div>
   );
 }
