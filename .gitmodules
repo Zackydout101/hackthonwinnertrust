@@ -1,0 +1,3 @@
+[submodule "flownow"]
+	path = flownow
+	url = https://github.com/Zackydout101/flownow.git

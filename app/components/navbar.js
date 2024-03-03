@@ -16,7 +16,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li key="3" className="navList">
-          <Link href="/shop">
+          <Link href="http://localhost:3001">
             Shop
           </Link>
         </li>
