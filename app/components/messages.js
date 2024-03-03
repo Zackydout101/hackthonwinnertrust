@@ -10,18 +10,18 @@ export default function Messages({ dbCollection }) {
   const [newMessage, setNewMessage] = useState("");
   const messageContainerRef = useRef(null);
 
-  // Fetching messages from Firestore
-  useEffect(() => {
-    const messagesRef = collection(db, dbCollection);
-    const q = query(messagesRef, orderBy("createdAt"), limit(100));
+  // Fetching messages from Firestore
+  useEffect(() => {
+    const messagesRef = collection(db, dbCollection);
+    const q = query(messagesRef, orderBy("createdAt"), limit(100));
 
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const data = querySnapshot.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
-      setMessages(data);
-    });
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const data = querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setMessages(data);
+    });
 
     // Cleanup on unmount
     return () => unsubscribe();
