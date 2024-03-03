@@ -160,4 +160,29 @@ nav {
 }
 .messageContainer{
   display:inline-block;
+  max-width: 30em;
+  margin:1em;
+}
+.received .mesBody{
+  background: gray;
+
+}
+.sent{
+
+}
+.mesBody{
+  max-width: 250px;
+  margin:1em;
+}
+.metadeta{
+  display:flex;
+  
+}
+.mesTime{
+  display:inline;
+
+}
+.mesName{
+  display:inline;
+  margin-right: 1em; 
 }

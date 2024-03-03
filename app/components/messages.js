@@ -29,16 +29,20 @@ export default function Messages({mes}) {
             <ul>
             {messages.map((message) => (
                 <li key={message.id} className={message.uid === uid ? "sent" : "received"}>
-                <section>
-                    {/* Display the UID with the message */}
-                    <p class="mesName">{message.uid}</p>
-                    <p class="mesText">{message.text}</p>
-                    {/* Message date and time */}
-                    {message.createdAt?.seconds && (
-                    <span>
-                        {formatRelative(new Date(message.createdAt.seconds * 1000), new Date())}
+                
+                    <span class="metadata">
+                        {/* Display the UID with the message */}
+                        <p class="mesName">{message.uid}</p>
+                        {/* Message date and time */}
+                        {message.createdAt?.seconds && (
+                        <span class="mesTime">
+                            {formatRelative(new Date(message.createdAt.seconds * 1000), new Date())}
+                        </span>
+                        )}
                     </span>
-                    )}
+                    <section class="mesBody">
+                    <p class="mesText">{message.text}</p>
+
                 </section>
                 </li>
             ))}
