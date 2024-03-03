@@ -4,15 +4,15 @@ export const serverList = [{
     route: "/"
 
 },{
-    name: 'Math',
+    name: 'MAT1320',
     address: '18.223.252.46:3000',
     route: "/math"
 },{
-    name: "French",
+    name: "ENG1112",
     address: '18.223.252.46:3001',
     route:"/french"
 },{
-    name: "Java",
+    name: "CSI2110",
     address: '18.223.252.46:3002',
     route:"/java"
     }]

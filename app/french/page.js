@@ -21,8 +21,8 @@ export default function Home() {
         <div className="mainContainer">
             <Sidebar />
             <div class="messagesContainer">
-                <Messages dbCollection = "FrenchChatRoom" />
-                <Test dbCollection="FrenchChatRoom"/>
+                <Messages dbCollection = "ENG1112" />
+                <Test dbCollection="ENG1112"/>
             </div>
         </div>
         
