@@ -20,8 +20,8 @@ export default function Home() {
         <div className="mainContainer">
             <Sidebar />
             <div class="messagesContainer">
-                <Messages dbCollection = "JavaChatRoom" />
-                <Test dbCollection="JavaChatRoom"/>
+                <Messages dbCollection = "CSI2120" />
+                <Test dbCollection="CSI2120"/>
             </div>
         </div>
         
