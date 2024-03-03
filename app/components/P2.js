@@ -9,7 +9,7 @@ const Test = ({ children }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div class="text">
       <footer className={styles.footer}>
         <p>4School</p>
       </footer>
