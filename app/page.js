@@ -19,8 +19,10 @@ export default function Home() {
         <Navbar />
         <div className="mainContainer">
             <Sidebar />
-            <Messages />
-            <Test />
+            <div class="messagesContainer">
+                <Messages />
+                <Test />
+            </div>
         </div>
         
    </main>
