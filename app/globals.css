@@ -162,7 +162,6 @@ li {
   display: flex;
   width: 100vw;
   height: 95vh;
-  overflow-y: auto;
 }
 .messagesContainer{
   display: grid;
@@ -186,8 +185,6 @@ li {
 }
 .sent{
   background:rgb(0,120,254);
-  overflow-y: auto;
-
 }
 .mesBody{
   /* width:max-content; */

@@ -4,7 +4,7 @@ import { db } from './firebaseConfig';
 import { collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import { formatRelative } from "date-fns";
 
-export default function Messages({dbCollection}) {
+export default function Messages({ dbCollection }) {
   const [uid, setUid] = useState("");
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
@@ -25,30 +25,34 @@ export default function Messages({dbCollection}) {
 
     // Cleanup on unmount
     return () => unsubscribe();
-  }, []); 
-    return (
-        <div class="messageContainer">
-            <ul>
-            {messages.map((message) => (
-                <li key={message.id} className={message.uid === uid ? "sent" : "received"}>
-                
-                    <span class="metadata">
-                        {/* Display the UID with the message */}
-                        <h6 class="mesName">{message.uid}</h6>
-                        {/* Message date and time */}
-                        {message.createdAt?.seconds && (
-                        <h6 class="mesTime">
-                            {formatRelative(new Date(message.createdAt.seconds * 1000), new Date())}
-                        </h6>
-                        )}
-                    </span>
-                    <section class="mesBody">
-                    <p class="mesText">{message.text}</p>
+  }, [dbCollection]); // Include dbCollection as a dependency
 
-                </section>
-                </li>
-            ))}
-            </ul>       
-        </div>
+  // Scroll to the bottom when messages are updated
+  useEffect(() => {
+    if (messageContainerRef.current) {
+      messageContainerRef.current.scrollTop = messageContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  return (
+    <div className="messageContainer" ref={messageContainerRef}>
+      <ul>
+        {messages.map((message) => (
+          <li key={message.id} className={message.uid === uid ? "sent" : "received"}>
+            <span className="metadata">
+              <h6 className="mesName">{message.uid}</h6>
+              {message.createdAt?.seconds && (
+                <h6 className="mesTime">
+                  {formatRelative(new Date(message.createdAt.seconds * 1000), new Date())}
+                </h6>
+              )}
+            </span>
+            <section className="mesBody">
+              <p className="mesText">{message.text}</p>
+            </section>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
