@@ -7,7 +7,8 @@ import { collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp 
 import { formatRelative } from "date-fns";
 import styles from './MA-Styles.css';
 
-const Test = () => {
+const Test = ({dbCollection}) => {
+  
   const [uid, setUid] = useState("");
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
@@ -26,7 +27,7 @@ const Test = () => {
     e.preventDefault();
 
     try {
-      await addDoc(collection(db, "messages"), {
+      await addDoc(collection(db, dbCollection), {
         text: newMessage,
         createdAt: serverTimestamp(),
         uid, // Use the random UID
@@ -41,7 +42,7 @@ const Test = () => {
 
   // Fetching messages from Firestore
   useEffect(() => {
-    const messagesRef = collection(db, "messages");
+    const messagesRef = collection(db, dbCollection);
     const q = query(messagesRef, orderBy("createdAt"), limit(100));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {

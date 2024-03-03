@@ -21,7 +21,7 @@ export default function Home() {
             <Sidebar />
             <div class="messagesContainer">
                 <Messages dbCollection = "GeneralChatRoom" />
-                <Test />
+                <Test dbCollection="GeneralChatRoom"/>
             </div>
         </div>
         

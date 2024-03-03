@@ -37,9 +37,9 @@ export default function Messages({dbCollection}) {
                         <h6 class="mesName">{message.uid}</h6>
                         {/* Message date and time */}
                         {message.createdAt?.seconds && (
-                        <span class="mesTime">
+                        <h6 class="mesTime">
                             {formatRelative(new Date(message.createdAt.seconds * 1000), new Date())}
-                        </span>
+                        </h6>
                         )}
                     </span>
                     <section class="mesBody">

@@ -172,6 +172,7 @@ nav {
   background:rgb(0,120,254);
 }
 .mesBody{
+  width:max-content;
   max-width: 250px;
   margin:1em;
   margin-top:0;
