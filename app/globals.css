@@ -162,6 +162,7 @@ nav {
   display:inline-block;
   max-width: 30em;
   margin:1em;
+  overflow-y: auto;
 }
 .received .mesBody{
   background: gray;
