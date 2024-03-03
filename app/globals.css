@@ -154,7 +154,10 @@ nav {
   height: 95vh;
 }
 .messagesContainer{
-  display: flex;
+  display: grid;
   width: 100vw;
   height: 95vh;
+}
+.messageContainer{
+  display:inline-block;
 }
