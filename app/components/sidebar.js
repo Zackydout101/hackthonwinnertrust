@@ -14,7 +14,7 @@ export default function Sidebar() {
         <h6>Choose the Server you want to enter</h6>
             {/* {{classServers}} */}
         {serverList.map((serv,index) =>(
-            <ClassServer serverInfo={serv}/>
+            <ClassServer key={index} serverInfo={serv}/>
         ))}
 
     </div>
