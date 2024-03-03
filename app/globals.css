@@ -148,15 +148,27 @@ nav {
 
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
 .mainContainer {
   display: flex;
   width: 100vw;
   height: 95vh;
+  overflow-y: auto;
 }
 .messagesContainer{
   display: grid;
   width: 100vw;
   height: 95vh;
+  overflow-y: auto;
 }
 .messageContainer{
   display:inline-block;
@@ -169,10 +181,13 @@ nav {
   margin-bottom: 1px;
   border-bottom:10px;
   border-color:gray;
+  overflow-y: auto;
 
 }
 .sent{
   background:rgb(0,120,254);
+  overflow-y: auto;
+
 }
 .mesBody{
   /* width:max-content; */
@@ -197,3 +212,6 @@ nav {
   margin-right: 1em; 
   font:.1em;
 }
+
+
+
